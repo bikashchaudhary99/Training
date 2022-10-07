@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+  class biku {
+      constructor(inputage,inputrollno,inputaddress){
+        this.age=inputage;
+        this.roll=inputrollno;
+        this.address=inputaddress;
+      }
+      employee() {
+    return 'Employee is ' + this.age + 'years old';
+  }
+    }
+    class viku extends biku{
+      constructor(inputage,inputrollno,inputaddress,inputmobile){
+      super(inputage,inputrollno,inputaddress)
+      this.mobile=inputmobile;
+    }
+      detail() {
+    return this.employee() + ', having mobile number ' + this.mobile;
+  }
+}
+Bikash= new viku(23,"19cse360","gunupur","7759053415");
+// document.getElementById("demo").innerHTML=Bikash.detail();
+alert(Bikash.detail());
+
+</script>
+
+</body>
+</html>

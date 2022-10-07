@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>palindrome</title>
+</head>
+<style>
+    .format{
+        background-image: url("images/texture.jpg");
+        height: 110px;
+        width: 410px;
+        padding: 50px;
+        border-radius: 50px;
+        margin:20px 200px 20px 200px ;
+    }
+    .box{
+        border-radius:15px;
+    }
+</style>
+<div class="format">
+<body>
+    <h3 style="color: red;"><u><b>PALINDROME CHECKER</b></u></h3>
+    Enter The Number :<input placeholder="Number only" class="box"type="number" name="n" id = "N"/>&nbsp;
+    <br><br><br><button onClick="Palindrome()" class="box" >CHECK</button>
+</body>
+</div>
+    <script>
+	function Palindrome()
+	{
+		var rem, temp, final = 0;
+		var number = document.getElementById("N").value;
+
+		temp = number;
+		while(number>0)
+		{
+			rem = number%10;
+			number = parseInt(number/10);
+			final = final*10+rem;
+		}
+		if(final==temp)
+		{
+			alert(" Palindrome");
+		}
+		else
+		{
+			alert("Not a Palindrome");
+		}
+	}
+</script>
+
+        </script>

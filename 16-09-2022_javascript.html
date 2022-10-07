@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Form</title>
+    <style>
+      span {
+        color: rgb(255, 17, 0);
+      }
+      .makeup{
+        margin: 100px 300px ;
+        background-color: bisque;
+        padding-top: 10px;
+      }
+      label{
+        color: rgb(72, 43, 202);
+      }
+      .submit1{
+        margin-left: 100px ;
+        color: azure;
+        background-color: green;
+        font-size: 110%;
+        border-radius: 15px;
+        font-style:italic;
+      }
+      .makeup2 {
+        height: 200px;
+        width: 200px;
+        background-color: bisque;
+        margin: 20px 500px;
+        padding-left: 10px;
+        color: blue;
+      }
+      
+    </style>
+    <script>
+      // validation
+      function validateform() {
+        let a = document.forms["myform"]["name"].value;
+        let b = document.forms["myform"]["num"].value;
+        let c = document.forms["myform"]["States"].value;
+        let d = document.forms["myform"]["gender"].value;
+        let e = document.forms["myform"]["cs"].checked;
+        let f = document.forms["myform"]["it"].checked;
+        let g = document.forms["myform"]["ca"].checked;
+        if (a == "") {
+          document.getElementById("nm").innerHTML = "*please fill this section";
+          return false;
+        } 
+            else {
+          document.getElementById("nm").innerHTML = "";
+            }
+        if (b == "") {
+          document.getElementById("mb").innerHTML = "*please fill this section";
+          return false;
+        }
+            else {
+          document.getElementById("mb").innerHTML = "";
+            }
+        if (c == "") {
+          document.getElementById("st").innerHTML = "*please fill this section";
+          return false;
+        }
+            else {
+          document.getElementById("st").innerHTML = "";
+            }
+        if (d == "") {
+          document.getElementById("ge").innerHTML = "*please fill this section";
+          return false;
+        }
+            else {
+          document.getElementById("ge").innerHTML = "";
+            }
+        if (e || f || g) {
+            document.getElementById("ch").innerHTML = "";
+        }
+             else {
+          document.getElementById("ch").innerHTML = "*please fill this section";
+        return false;
+      }
+    }
+    //Try & Catch
+    function TRY(){
+      try {
+        var a = 123;
+        var b = "bikash";
+        // var c = 10/0
+        document.write(a);
+        document.write(b);
+        document.write(c);
+      } 
+      catch (error) {
+        alert("Something went wrong " + error.message); // this messege will show only if there is any error in try section
+      }
+    } 
+
+//     Inhertance
+    class biku {
+      constructor(inputage,inputrollno,inputaddress){
+        this.age=inputage;
+        this.roll=inputrollno;
+        this.address=inputaddress;
+      }
+      employee() {
+    return 'Employee is ' + this.age + ' years old';
+  }
+    }
+    class viku extends biku{
+      constructor(inputage,inputrollno,inputaddress,inputmobile){
+      super(inputage,inputrollno,inputaddress)
+      this.mobile=inputmobile;
+    }
+      detail() {
+    return this.employee() + ' , having mobile number ' + this.mobile;
+  }
+}
+Bikash= new viku(23,"19cse360","gunupur","7759053415");
+alert(Bikash.detail());
+
+//Prime
+function prime() {
+        let number = document.getElementById("pnum").value;
+        if (number == 1) {
+          document.getElementById("check").innerHTML ="Neither prime nor composite";
+        } else if (number > 1) {
+          for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+              document.getElementById("check").innerHTML = "not prime";
+              break;
+            } else {
+              document.getElementById("check").innerHTML = "prime";
+            }
+          }
+        } 
+        else {
+          alert("enter Positive number");
+        }
+      }
+      // Promise And Await
+    // Promise:-promise contain both the code for production as well as the call for the code to consume.
+    // Await:-The Await before the function makes the function wait for the promise.
+
+
+
+    // Session and Cookies
+    // Cookies:- It is an cliet side field on local computer that holds the information.Its lifetime set by the user.
+    // Session:-Session are the server field that conatins overall user data.
+
+
+    // Local storage and Session Storage
+    // Local storage :- Local Storage is read only Properties but its data doesnot expires.
+    // local storage have four methoda:-
+    //1.setItem() 
+    //2.getItem()
+    //3.removeItem()
+    //4.clear()
+    //Session Storage:-It is also read only properties, but its data got expired after the end of page session.
+// It is also having the same method as local storage have.
+    </script>
+  </head>
+  <body >
+    <!-- validation -->
+    <div>
+    <form name="myform"  onsubmit="return validateform()"  action="/Submit_form.html" class="makeup">
+      <fieldset><b>
+        <label for="Name">NAME:</label>
+        <input type="text" id="name" size="50" placeholder="Enter Your full name"/>
+        <span id="nm"></span>
+        <br /><br /><label for="mobile">Phone Number:</label>
+        <input type="number" id="num" size="50" />
+        <span id="mb"></span>
+        <br /><br /><label for="state"><b>State:</b></label>
+        <select id="States">
+          <option value="">Choose Your State</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Gujrat">Gujrat</option>
+        </select>
+        <span id="st"></span>
+        <br /><br /><label for="Gender">Gender: </label>
+        <input type="radio" name="gender" value="Male" />Male
+        <input type="radio" name="gender" value="FeMale" />Female
+        <span id="ge"></span>
+
+        <br /><br /><label for="specialization">Specialization:</label><br />
+        <input type="checkbox" id="cs" value="computerscience" />
+        <label for="cs">Computer Science</label><br />
+        <input type="checkbox" id="it" value="InformationTechnology" />
+        <label for="it">Information Technology</label><br />
+        <input type="checkbox" id="ca" value="ComputerArchitecture" />
+        <label for="ca">Computer Architecture</label><br />
+        <span id="ch"></span>
+        <br><br><input type="submit" value="Submit" class="submit1"></input>
+</b></fieldset>
+    </form>
+</div>
+<!-- ErrorHandling -->
+<div>
+<input type="submit" value="ErrorHandling" onclick="return TRY()" style="background-color:rgb(160, 143, 143) ;">
+</div>
+
+<!-- Prime Checker -->
+<div>
+  <div class="makeup2" >
+    <h1>Prime Checker</h1>
+    <input type="number" id="pnum" maxlength="12" />
+    
+    <input type="submit" value="SUBMIT" onclick="return prime()" />
+    <span id="check"></span>
+  </div>
+</div>  
+</body>
+
+</html>

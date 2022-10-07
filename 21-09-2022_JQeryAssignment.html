@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+     <style>
+        span{
+            color: rgb(19, 171, 241);
+            font-family: "Poiret One", cursive;
+        }
+        input{
+            border-radius:10px;
+            color: rgb(255, 0, 0);
+            border: 3px solid rgb(3, 221, 250);  
+            padding: 4px;  
+            font-family: 'Lato';
+            
+        }
+        form{
+            font-family: 'Lato';
+        }
+        section{
+            border: 3px solid rgb(3, 221, 250);
+            border-radius:15px;
+        }
+     </style>
+ 
+</head>
+<body>
+    <div class="container text-primary ">
+        <div class="row">
+            <section class="col-7 bg-dark ">
+    <form id = "login-form" action="Submit_form.html" class="m-2"> 
+        <fieldset class="m-3"><b>
+            <label for="Name">NAME:</label>
+        <input type="text" style="margin-left: 55px;" id="name" size="20" placeholder="Enter Your full name" minlength="8" required/><span id="FN"></span>
+        <br /><br /><label for="mobile">Phone Number:</label>
+        <input type="tel" id="num" size="20" minlength="10" required/><span id="no"></span>
+        <br /><br /><label for="state"><b>State:</b></label><span id="st"></span>
+        <p>
+        <select id="States" required>
+          <option value="">Choose Your State</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Gujrat">Gujrat</option>
+        </select></p>
+        <label for="Gender">Gender: </label><br><p id="gen"></p>
+        <div >
+        <input  type="radio"  name="gender" class="gender " value="Male" />Male
+        <input type="radio" name="gender" class="gender"value="FeMale" />Female</div>
+
+        <br /><br /><label for="specialization">Specialization:</label><span id="ch"></span><br />
+        <input type="checkbox" class="specialization" value="computerscience" />
+        <label for="cs">Computer Science</label><br />
+        <input type="checkbox" class="specialization" value="InformationTechnology" />
+        <label for="it">Information Technology</label><br />
+        <input type="checkbox" class="specialization" value="ComputerArchitecture" />
+        <label for="ca">Computer Architecture</label><br />
+        
+        <br><br><button type="submit" id="submit1" class="btn btn-outline-primary" >SUBMIT</button>
+        </b>
+    </fieldset>
+    </form>
+</section>
+</div>
+</div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>  
+    $(document).ready (function () {  
+
+        $("#submit1").click(function(){
+            let Name =$("#name").val();
+            if(Name== ""){
+                
+                document.getElementById("FN").innerHTML="*Please enter a name"
+                return false;
+            }
+            else{
+                document.getElementById("FN").innerHTML=""
+            }
+            let Number =$("#num").val();
+            if(Number==""){
+                document.getElementById("no").innerHTML="*Please enter a phone number"
+                return false;
+            }
+            else{
+                document.getElementById("no").innerHTML=""
+            }
+            let STATES =$("#States").val();
+            if(STATES==""){
+                document.getElementById("st").innerHTML="*Please select state"
+                return false;
+            }
+            else{
+                document.getElementById("st").innerHTML=""
+            }
+            let GENDER =$(".gender").is(":checked")
+           
+            if(GENDER==""){
+                document.getElementById("gen").innerHTML="*Please select your gender"
+                return false;
+               
+            }
+            else{
+                document.getElementById("gen").innerHTML=""
+            }
+            let SP = $(".specialization").is(":checked")
+            if(SP==""){
+                document.getElementById("ch").innerHTML="*Please select your Specialization"
+                return false;
+               
+            }
+            else{
+                document.getElementById("ch").innerHTML=""
+            }
+        });
+    });  
+    </script> 

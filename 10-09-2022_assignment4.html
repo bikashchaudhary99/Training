@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Script Demo</title>
+  </head>
+  <style>
+    .st {
+      background-color: aqua;
+      border-radius: 15px;
+    }
+    .sy{
+        background-color:rgb(240, 237, 52);
+        color: rgb(14, 13, 13);
+        padding: 15px;
+        margin-right: 552px;
+        border-radius: 15px;
+        margin-left: 300px;
+
+    }
+    .output{
+        border: rgb(228, 132, 6);
+        background-color: aqua;
+        width: 40%;
+        border-radius: 50px;
+        color: rgb(247, 8, 8);
+    }
+  </style>
+  <body >
+    <script>
+      function fname() 
+      {
+        var Name = document.getElementById("name1").value;
+        document.getElementById("demo").innerHTML ="Hello Mr." +Name;
+      }
+      function phone() 
+      {
+        var mobile = document.getElementById("tel").value;
+        document.getElementById("demo2").innerHTML = "Your Phone Number Is :"+mobile;
+      }
+      function add()
+       {
+        var Address = document.getElementById("address").value;
+        document.getElementById("demo3").innerHTML="Your Address Is :"+Address;
+      }
+      function state()
+      {
+        var s = document.getElementById("States").value;
+        document.getElementById("demo4").innerHTML="Your State Is :"+s;
+      }
+    </script>
+
+
+    <div class="sy">
+    <label for="name"><b>Name:<b></b></label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="name1" />
+    <button onclick="fname()" class="st">Show Key</button>
+    <br /><br />
+
+    <label for="mobile"><b>Phone Number:</b></label>&nbsp;
+    <input type="tel" id="tel" maxlength="10" />
+    <button onclick="phone()" class="st">Show Key</button><br /><br />
+
+    <label for="address"><b>Address:</b></label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="address" />
+    <button onclick="add()"  class="st">Show Key</button><br><br>
+
+    <label for="state"><b>State:</b></label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select id="States" name="state" >
+        <option value="state" disabled>Choose Your State</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Gujrat">Gujrat</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="state()"  class="st">Show Key</button>
+    </div>
+    <div class="output">
+        <h3 id="demo"></h3>
+    </div>
+    <div class="output">
+        <h3 id="demo2"></h3>
+    </div>
+        <div class="output">
+        <h3 id="demo3"></h3>
+    </div>
+        <div class="output">
+        <h3 id="demo4"></h3>
+    </div>
+    </body>
+</html>

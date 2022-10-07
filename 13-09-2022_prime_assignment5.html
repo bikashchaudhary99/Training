@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prime</title>
+    <style>
+      .makeup {
+        height: 200px;
+        width: 200px;
+        background-color: bisque;
+        margin: 20px 500px;
+        padding-left: 10px;
+        color: blue;
+      }
+    </style>
+    <script>
+      function prime() {
+        let number = document.getElementById("num").value;
+        if (number == 1) {
+          document.getElementById("check").innerHTML =
+            "Neither prime nor composite";
+        } else if (number > 1) {
+          for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+              document.getElementById("check").innerHTML = "not prime";
+              break;
+            } else {
+              document.getElementById("check").innerHTML = "prime";
+              break;
+            }
+          }
+        } else {
+          alert("enter Positive number");
+        }
+      }
+
+    </script>
+  </head>
+  <body
+    style="
+      background-image: url('images/sunset.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  >
+    <div class="makeup">
+      <h1>Prime Checker</h1>
+      <input type="number" id="num" maxlength="12" />
+      <p id="check"></p>
+      <input type="submit" value="SUBMIT" onclick="prime()" />
+    </div>
+  </body>
+</html>

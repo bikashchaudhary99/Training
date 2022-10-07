@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment3</title>
+</head>
+<style>
+    .form {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(224, 222, 222);
+
+
+    }
+
+</style>
+
+<body>
+    <div>
+        <form class="form1" style="width:1000px; height:auto; ">
+            <fieldset>
+                <label>
+                    <div style="color:red; text-align: right; font-size:120% ; padding-right:35px ;"><b><u>Student
+                                Registration Form</u></b></div>
+                </label><br>
+                <div class="form"><b>
+                        <label for="fname">First Name: </label> &nbsp; &nbsp;
+                        <input type="text" id="fname" name="firstname" style="width: 700px; height:30px ;"
+                            placeholder="Enter Your First name" required><br><br>
+                        <label for="lname">Last Name: </label> &nbsp; &nbsp;
+                        <input type="text" id="lname" name="lastname" style="width: 700px; height:32px ;"
+                            placeholder="Enter Your Last name" required><br><br>
+                        <label for="email">Email: </label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="email" id="email" name="email" style="width: 700px; height:32px ;"
+                            placeholder="it should contain @" required><br><br>
+                        <label for="phone">Mobile: </label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="tel" id="phone" name="phone" size="10" placeholder="only 10 Digit allowed"
+                            pattern="[0-9]{10}" style="width: 700px; height:30px ;"maxlength="10" required><br><br>
+                        <label for="gender">Gender: </label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="male" value="gender">Male
+                        <input type="radio" name="male" value="gender">Female <br><br>
+                        <label for="dob">DOB: </label> &nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="date" id="dob" name="dob" placeholder="mm/dd/yyyy"
+                            style="width: 700px; height:30px ;" required><br><br>
+                        <label for="address">Address:</label> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+                        <input type="text" id="address" name="address" style="width: 700px; height:232px ;" required><br><br>
+                        <label for="city">City:</label> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="city" name="city" style="width: 700px; height:32px ;" required><br><br>
+                        <label for="area">Area Pin:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" id="areapin" name="areapin" style="width: 700px; height:30px ;" required><br><br>
+                        <label
+                            for="state">State:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="state" name="state" style="width: 700px; height:32px ;" ><br><br>
+                        <label for="qualification">Qualification:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select id="qualification" name="qualification">
+                            <option value="q1">Select Qualification</option>
+                            <option value="q2">10th</option>
+                            <option value="q3">12th</option>
+                            <option value="q4">Diploma</option>
+                            <option value="q5">B.tech</option>
+                            <option value="q6">Masters</option>
+                        </select><br><br><br>
+                        <label for="specialization">Specialization:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;
+                        <input type="checkbox" id="cs" name="cs" value="computerscience">
+                        <label for="cs">Computer Science</label><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="it" name="it" value="InformationTechnology">
+                        <label for="it">Information Technology</label><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="ca" name="ca" value="ComputerArchitecture">
+                        <label for="ca">Computer Architecture</label><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="tc" name="tc" value="TeleCommunication">
+                        <label for="tc">Tele Communication</label><br><br><br>
+                        <label for="password">Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="password" id="password" name="password"
+                            style="width: 700px; height:30px ;" required><br><br>
+                        <input type="submit" id="Register" value="Register"
+                            style="width: 100px; height:30px ; background-color: rgb(64, 168, 64);color: antiquewhite;border-radius:10px ;">
+
+                    </b>
+                </div>
+            </fieldset>
+        </form>
+</body>
+
+</html>
